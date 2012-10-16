@@ -22,7 +22,7 @@ Include this two lines in the "dependencies" section in index.html:
 `{ src: 'plugin/wave/webcam-swiper-0.1.js'},
 { src: 'plugin/wave/client.js'}´
 
-Run the server.js file via node to startup a server on localhost:1947 (or use any other server to serve the presentation, for example the speakernote plugin has it's own server wich will do just fine). 
+Run the server.js file via node to startup a server on localhost:1947 (or use any other server to serve the presentation, for example the speakernote plugin has it's own server wich will do just fine). If you use my server.js be sure to install the needed modules - for example with a simple `npm install -d`.
 Open the presentation, click "accept" when Chrome asks you to grant permission to use the webcam and then wave/swipe in front of your webcam  to advnace through your slides.
 
 
