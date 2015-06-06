@@ -154,12 +154,12 @@ function initializeWebcamSwiper() {
 				var i = dataLength-1;
 				while (i >= 0) {
 					if (Math.abs(previousData[i] - currentData[i]) > PIXEL_CHANGE_THRESHOLD) {
-						motionWeight += (((i / 4) % canvasWidth) == 0 ? ((i-1) / 4 % canvasWidth) : ((i / 4) % canvasWidth)- (canvasWidth / 2)); 
+						motionWeight += (((i / 4) % canvasWidth) == 0 ? ((i-1) / 4 % canvasWidth) : ((i / 4) % canvasWidth)- (canvasWidth / 2));
 
 					}
 					i -= 4;
 				}
-				
+
 				return motionWeight;
 			}
 
@@ -173,7 +173,7 @@ function initializeWebcamSwiper() {
 				var dataLength = theData.length;
 				var i = dataLength-1;
 				var lightLevel;
-				 
+
 				while ( i >= 0) {
 					// To find the desaturated value, average the brightness of the red, green, and blue values
 					var average = (theData[i] + theData[i + 1] + theData[i + 2]) / 3;
@@ -205,7 +205,7 @@ function initializeWebcamSwiper() {
 			// 	return value / dataLength;
 			// }
 		});
-	});
+	}, function(){console.warn("Could not connect to stream");});
 }
 
 function destroyWebcamSwiper() {
